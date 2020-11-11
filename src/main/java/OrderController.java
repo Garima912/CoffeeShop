@@ -207,7 +207,7 @@ public class OrderController implements EventHandler {
 
 
     public double orderTotal(Coffee order){
-        double cost = order.makeCoffee();
+        double cost = Math.round(order.makeCoffee()*100.0)/100.0;
         System.out.println("Total: "+cost);
         return cost;
     }
